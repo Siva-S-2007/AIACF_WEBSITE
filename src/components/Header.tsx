@@ -15,10 +15,12 @@ const Header = () => {
 
   const navItems = [
     { label: 'About', href: '#about' },
+    { label: 'Council', href: '#council' },
     { label: 'Objectives', href: '#objectives' },
     { label: 'Chit Insights', href: '#chit-insights' },
-    { label: 'Members', href: '#members' },
+    { label: 'Leadership', href: '#leadership' },
     { label: 'Regulation', href: '#regulation' },
+    { label: 'State Offices', href: '#state-offices' },
     { label: 'Media', href: '#media' },
     { label: 'Contact', href: '#contact' },
   ];
