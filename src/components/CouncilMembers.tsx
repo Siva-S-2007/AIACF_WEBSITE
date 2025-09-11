@@ -4,40 +4,40 @@ import { Users, Mail, Phone, MapPin, Award } from 'lucide-react';
 const CouncilMembers = () => {
   const councilMembers = [
     {
-      name: 'Dr. Rajesh Kumar',
-      position: 'President',
+      name: 'T S SIVA RAMAKRISHNAN',
+      position: 'ADVISOR',
       location: 'New Delhi',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: './src/9.jpg',
       email: 'president@aiacf.org',
       phone: '+91-98765-43210',
       experience: '25+ Years',
       specialization: 'Policy & Regulation'
     },
     {
-      name: 'Mrs. Priya Sharma',
-      position: 'General Secretary',
+      name: 'PRAVEEN',
+      position: 'President',
       location: 'Mumbai',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: './src/praveen.png',
       email: 'secretary@aiacf.org',
       phone: '+91-98765-43211',
       experience: '20+ Years',
       specialization: 'Member Relations'
     },
     {
-      name: 'Mr. Suresh Patel',
-      position: 'Treasurer',
+      name: 'Chitrarasu',
+      position: 'General Secretary',
       location: 'Ahmedabad',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: './src/chitrarasu.png',
       email: 'treasurer@aiacf.org',
       phone: '+91-98765-43212',
       experience: '18+ Years',
       specialization: 'Financial Management'
     },
     {
-      name: 'Dr. Meera Reddy',
-      position: 'Vice President (South)',
+      name: 'AP Arunachalam',
+      position: 'TREASURER',
       location: 'Hyderabad',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: './src/ap arunachalam.png',
       email: 'vp.south@aiacf.org',
       phone: '+91-98765-43213',
       experience: '22+ Years',

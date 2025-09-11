@@ -7,7 +7,7 @@ const ImageHero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920"
+          src="./src/aiacf_grp_photo.jpg"
           alt="AIACF Team Group Photo"
           className="w-full h-full object-cover"
         />

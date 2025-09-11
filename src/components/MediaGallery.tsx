@@ -8,45 +8,45 @@ const MediaGallery = () => {
   const mediaItems = [
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-      thumbnail: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400',
-      title: 'Annual Conference 2023',
+      src: './src/9.jpg',
+      thumbnail: '/src/9.jpg',
+      title: 'Speech Delivery',
       description: 'AIACF Annual Conference bringing together industry leaders and stakeholders.'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      thumbnail: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400',
-      title: 'Industry Workshop',
-      description: 'Training workshop on regulatory compliance and best practices.'
+      src: './src/2.jpg',
+      thumbnail: './src/2.jpg',
+      title: 'General Meeting',
+      description: 'AIACF Annual general meeting.'
     },
     {
       type: 'video',
-      src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      thumbnail: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400',
-      title: 'AIACF Overview Video',
-      description: 'Introduction to AIACF and our mission for financial inclusion.'
+      src: 'https://youtube.com/watch?v=TRwJ6r8GqPc',
+      thumbnail: './src/thumb2.jpg',
+      title: 'GST & CHIT FUNDS',
+      description: 'Overview on gst and chit funds explained by general secretary of AIACF'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
-      thumbnail: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400',
+      src: './src/4.jpg',
+      thumbnail: './src/4.jpg',
       title: 'Member Meeting',
       description: 'Quarterly member meeting discussing industry developments.'
     },
     {
       type: 'image',
-      src: 'https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800',
-      thumbnail: 'https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400',
+      src: './src/5.jpg',
+      thumbnail: './src/5.jpg',
       title: 'Award Ceremony',
       description: 'Recognition ceremony for outstanding contributions to the industry.'
     },
     {
-      type: 'video',
-      src: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-      thumbnail: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=400',
-      title: 'Digital Transformation',
-      description: 'Discussion on digitization initiatives in the chit fund industry.'
+      type: 'video',  
+      src: 'https://www.youtube.com/watch?v=svmyvads8pY',
+      thumbnail: './src/thumb1.jpg',
+      title: 'Chit Fund Roars Back',
+      description: 'Chit fund association organize a press conference in new delhi to clear about the Sharda Scam.... Association member TS Shiv rama krishna and kamal bhambani talking to media...'
     }
   ];
 

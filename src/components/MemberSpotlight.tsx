@@ -4,27 +4,27 @@ import { Award, Mail, Phone } from 'lucide-react';
 const MemberSpotlight = () => {
   const officeBearer = [
     {
-      name: 'Dr. Rajesh Kumar',
-      position: 'President',
-      image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
+      name: 'PRAVEEN',
+      position: 'PRESIDENT',
+      image: './src/praveen.png',
       bio: 'Leading the association with over 25 years of experience in the chit fund industry. Advocate for digital transformation and regulatory reforms.',
       achievements: ['Industry Pioneer Award 2020', 'Financial Inclusion Champion', 'Policy Reform Advocate'],
       email: 'president@aiacf.org',
       phone: '+91-98765-43210'
     },
     {
-      name: 'Mrs. Priya Sharma',
+      name: 'CHITRARASU',
       position: 'General Secretary',
-      image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: './src/chitrarasu.png',
       bio: 'Dedicated to member services and organizational excellence. Expert in regulatory compliance and industry best practices.',
       achievements: ['Excellence in Service Award', 'Compliance Expert', 'Member Advocate'],
       email: 'secretary@aiacf.org',
       phone: '+91-98765-43211'
     },
     {
-      name: 'Mr. Suresh Patel',
-      position: 'Treasurer',
-      image: 'https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400',
+      name: 'KAMAL BHAMBHANI',
+      position: 'Organizing Secretary',
+      image: './src/kamal bhambhani.png',
       bio: 'Financial steward ensuring transparent and efficient management of association resources. CPA with expertise in financial governance.',
       achievements: ['Financial Excellence Award', 'Transparency Champion', 'Governance Expert'],
       email: 'treasurer@aiacf.org',
