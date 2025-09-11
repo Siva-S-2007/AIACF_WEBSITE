@@ -5,6 +5,10 @@ import ImageHero from './components/ImageHero';
 import QuickAccess from './components/QuickAccess';
 import About from './components/About';
 import ChitFundsExplained from './components/ChitFundsExplained';
+import ChitFundAct from './components/ChitFundAct';
+import ChitAsLoan from './components/ChitAsLoan';
+import ChitVsOthers from './components/ChitVsOthers';
+import Glossary from './components/Glossary';
 import Objectives from './components/Objectives';
 import CouncilMembers from './components/CouncilMembers';
 import MemberSpotlight from './components/MemberSpotlight';
@@ -22,10 +26,14 @@ function App() {
         <QuickAccess />
         <About />
         <ChitFundsExplained />
+        <ChitFundAct />
+        <ChitAsLoan />
+        <ChitVsOthers />
         <Objectives />
         <CouncilMembers />
         <MemberSpotlight />
         <StateOffices />
+        <Glossary />
         <MediaGallery />
       </main>
       <Footer />

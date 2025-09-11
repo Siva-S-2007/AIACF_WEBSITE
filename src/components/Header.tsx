@@ -5,6 +5,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [dropdownOpen, setDropdownOpen] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -15,13 +17,24 @@ const Header = () => {
 
   const navItems = [
     { label: 'About', href: '#about' },
-    { label: 'Council', href: '#council' },
-    { label: 'Objectives', href: '#objectives' },
-    { label: 'Chit Insights', href: '#chit-insights' },
+    { 
+      label: 'Chit', 
+      href: '#chit-insights',
+      dropdown: [
+        { label: 'Central Chit Fund Act', href: '#central-chit-fund-act' },
+        { label: 'Chit as a Loan', href: '#chit-as-loan' },
+        { label: 'Chit Funds for Savings and Investment', href: '#chit-insights' },
+        { label: 'Chit vs. Other Financial Instruments', href: '#chit-vs-others' },
+        { label: 'Council Members', href: '#council' },
+        { label: 'Glossary', href: '#glossary' },
+        { label: 'Governing Body', href: '#council' },
+        { label: 'Rules & Regulations', href: '#objectives' },
+        { label: 'State Associations and Offices', href: '#state-offices' },
+        { label: 'Representation to Government Agencies', href: '#objectives' }
+      ]
+    },
+    { label: 'Gallery', href: '#media' },
     { label: 'Leadership', href: '#leadership' },
-    { label: 'Regulation', href: '#regulation' },
-    { label: 'State Offices', href: '#state-offices' },
-    { label: 'Media', href: '#media' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -66,14 +79,44 @@ const Header = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
-                </a>
+                <div key={item.label} className="relative">
+                  {item.dropdown ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setDropdownOpen(item.label)}
+                      onMouseLeave={() => setDropdownOpen(null)}
+                    >
+                      <button className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group flex items-center">
+                        {item.label}
+                        <span className="ml-1 text-xs">▼</span>
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                      </button>
+                      
+                      {dropdownOpen === item.label && (
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-50">
+                          {item.dropdown.map((dropdownItem, index) => (
+                            <a
+                              key={index}
+                              href={dropdownItem.href}
+                              className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors duration-200"
+                              onClick={() => setDropdownOpen(null)}
+                            >
+                              {dropdownItem.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <a
+                      href={item.href}
+                      className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group"
+                    >
+                      {item.label}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
+                    </a>
+                  )}
+                </div>
               ))}
             </div>
 
@@ -93,14 +136,33 @@ const Header = () => {
         } overflow-hidden bg-white border-t border-slate-200`}>
           <div className="px-4 py-2 space-y-1">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200"
-              >
-                {item.label}
-              </a>
+              <div key={item.label}>
+                {item.dropdown ? (
+                  <div>
+                    <div className="px-3 py-2 text-slate-700 font-medium">{item.label}</div>
+                    <div className="ml-4 space-y-1">
+                      {item.dropdown.map((dropdownItem, index) => (
+                        <a
+                          key={index}
+                          href={dropdownItem.href}
+                          onClick={() => setIsMenuOpen(false)}
+                          className="block px-3 py-2 text-sm text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200"
+                        >
+                          {dropdownItem.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <a
+                    href={item.href}
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-3 py-2 text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-md transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                )}
+              </div>
             ))}
           </div>
         </div>
